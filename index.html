@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nont Shop</title>
+
+<style>
+*{
+ box-sizing:border-box;
+ font-family:Arial, sans-serif;
+}
+
+body{
+ margin:0;
+ background:#f5f5f5;
+}
+
+header{
+ background:#111;
+ color:white;
+ padding:20px;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+}
+
+.logo{
+ font-size:25px;
+ font-weight:bold;
+}
+
+nav a{
+ color:white;
+ margin:10px;
+ text-decoration:none;
+}
+
+.hero{
+ padding:50px;
+ background:linear-gradient(120deg,#111,#555);
+ color:white;
+ text-align:center;
+}
+
+.hero button{
+ padding:12px 25px;
+ border:0;
+ border-radius:20px;
+ cursor:pointer;
+}
+
+.search{
+ text-align:center;
+ padding:20px;
+}
+
+input{
+ width:80%;
+ padding:15px;
+ border-radius:20px;
+ border:1px solid #ddd;
+}
+
+.products{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ gap:20px;
+ padding:30px;
+}
+
+.card{
+ background:white;
+ border-radius:20px;
+ padding:20px;
+ box-shadow:0 5px 20px #ddd;
+}
+
+.card img{
+ width:100%;
+ border-radius:15px;
+}
+
+.price{
+ color:red;
+ font-size:22px;
+ font-weight:bold;
+}
+
+button{
+ background:#111;
+ color:white;
+ padding:10px;
+ border-radius:10px;
+ border:0;
+ cursor:pointer;
+}
+
+footer{
+ background:#111;
+ color:white;
+ text-align:center;
+ padding:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+NONT SHOP
+</div>
+
+<nav>
+<a href="#">หน้าแรก</a>
+<a href="#">สินค้า</a>
+<a href="#">ติดต่อ</a>
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<h1>ร้านค้าออนไลน์ของคุณ</h1>
+
+<p>ซื้อขายง่าย สวย เร็ว ใช้งานง่าย</p>
+
+<button>เริ่มซื้อ</button>
+
+</section>
+
+
+<div class="search">
+
+<input placeholder="ค้นหาสินค้า...">
+
+</div>
+
+
+<section class="products">
+
+
+<div class="card">
+
+<img src="https://picsum.photos/300">
+
+<h2>สินค้า A</h2>
+
+<p>รายละเอียดสินค้า</p>
+
+<div class="price">
+฿499
+</div>
+
+<button>
+ใส่ตะกร้า
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<img src="https://picsum.photos/301">
+
+<h2>สินค้า B</h2>
+
+<p>ของคุณภาพดี</p>
+
+<div class="price">
+฿899
+</div>
+
+<button>
+ใส่ตะกร้า
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<img src="https://picsum.photos/302">
+
+<h2>สินค้า C</h2>
+
+<p>โปรโมชั่นพิเศษ</p>
+
+<div class="price">
+฿299
+</div>
+
+<button>
+ใส่ตะกร้า
+</button>
+
+</div>
+
+
+</section>
+
+
+<footer>
+
+© 2026 Nont Shop
+
+</footer>
+
+
+<script>
+
+let buttons=document.querySelectorAll("button");
+
+buttons.forEach(btn=>{
+ btn.onclick=()=>{
+ alert("เพิ่มสินค้าเข้าตะกร้าแล้ว");
+ }
+})
+
+</script>
+
+
+</body>
+</html>
