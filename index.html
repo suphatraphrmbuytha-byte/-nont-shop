@@ -279,3 +279,48 @@
 
 </body>
 </html>
+<!-- Online Bar -->
+<div class="online-bar">
+    🟢 ระบบออนไลน์ 24 ชั่วโมง พร้อมให้บริการตลอดเวลา
+</div>
+
+<!-- Floating Facebook -->
+<a href="https://www.facebook.com/share/1BYmkifQkA/?mibextid=wwXIfr"
+   class="fb-float"
+   target="_blank">
+    💬
+</a>
+
+<!-- Back To Top -->
+<button id="topBtn">
+    ⬆️
+</button>
+
+<script>
+
+const topBtn = document.getElementById("topBtn");
+
+window.onscroll = function(){
+
+    if(document.body.scrollTop > 300 ||
+       document.documentElement.scrollTop > 300){
+
+        topBtn.style.display = "block";
+
+    }else{
+
+        topBtn.style.display = "none";
+
+    }
+};
+
+topBtn.onclick = function(){
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+};
+
+</script>
