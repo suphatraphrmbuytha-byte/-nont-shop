@@ -1,1 +1,79 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>หน้าสมาชิก</title>
 
+<style>
+
+body{
+    background:#0b1120;
+    color:white;
+    font-family:sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.box{
+    background:#111827;
+    padding:30px;
+    border-radius:20px;
+    width:350px;
+    text-align:center;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    margin-top:20px;
+    border:none;
+    border-radius:10px;
+    background:#dc2626;
+    color:white;
+    cursor:pointer;
+}
+
+</style>
+</head>
+<body>
+
+<div class="box">
+
+<h2>
+👤 ยินดีต้อนรับ
+</h2>
+
+<h3 id="name"></h3>
+
+<button onclick="logout()">
+ออกจากระบบ
+</button>
+
+</div>
+
+<script>
+
+if(localStorage.getItem("loggedIn") != "true"){
+
+window.location.href = "login.html";
+
+}
+
+document.getElementById("name").innerHTML =
+localStorage.getItem("username");
+
+function logout(){
+
+localStorage.removeItem("loggedIn");
+
+window.location.href = "login.html";
+
+}
+
+</script>
+
+</body>
+</html>
