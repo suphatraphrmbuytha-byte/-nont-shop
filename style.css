@@ -244,3 +244,15 @@ footer{
 
 }
 ```
+body{
+    background:
+    radial-gradient(circle at top,#10204a 0%,#0b1120 40%),
+    #0b1120;
+    color:white;
+    font-family:'Prompt',sans-serif;
+} .online-users{
+    text-align:center;
+    color:#38bdf8;
+    margin-bottom:50px;
+    font-size:18px;
+}
