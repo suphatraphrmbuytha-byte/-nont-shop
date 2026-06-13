@@ -1,3 +1,4 @@
+```css
 *{
     margin:0;
     padding:0;
@@ -113,6 +114,12 @@ nav a{
     border-radius:25px;
     margin-bottom:30px;
     border:1px solid rgba(255,255,255,.08);
+    transition:.3s;
+}
+
+.package-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 30px rgba(56,189,248,.25);
 }
 
 .package-img{
@@ -188,6 +195,43 @@ footer{
     color:#94a3b8;
 }
 
+.online-bar{
+    background:#16a34a;
+    text-align:center;
+    padding:15px;
+    font-weight:600;
+}
+
+.fb-float{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#1877f2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    text-decoration:none;
+    z-index:999;
+}
+
+#topBtn{
+    position:fixed;
+    left:20px;
+    bottom:20px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    cursor:pointer;
+    display:none;
+}
+
 @media(max-width:768px){
 
     .hero h1{
@@ -199,3 +243,4 @@ footer{
     }
 
 }
+```
