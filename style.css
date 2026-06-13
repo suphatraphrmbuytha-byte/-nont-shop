@@ -6,7 +6,9 @@
 }
 
 body{
-    background:#0b1120;
+    background:
+    radial-gradient(circle at top,#10204a 0%,#0b1120 40%),
+    #0b1120;
     color:white;
     font-family:'Prompt',sans-serif;
 }
@@ -114,12 +116,17 @@ nav a{
     border-radius:25px;
     margin-bottom:30px;
     border:1px solid rgba(255,255,255,.08);
-    transition:.3s;
+    transition:0.4s;
+    position:relative;
+    overflow:hidden;
 }
 
 .package-card:hover{
     transform:translateY(-8px);
-    box-shadow:0 0 30px rgba(56,189,248,.25);
+    box-shadow:
+    0 0 20px rgba(56,189,248,.3),
+    0 0 40px rgba(56,189,248,.2),
+    0 0 60px rgba(56,189,248,.1);
 }
 
 .package-img{
@@ -161,6 +168,50 @@ nav a{
 
 .price-box h2{
     color:#00ff99;
+}
+
+.online-users{
+    text-align:center;
+    color:#38bdf8;
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:50px;
+}
+
+.server-status{
+    padding:80px 8%;
+}
+
+.server-status h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.server-box{
+    margin-bottom:25px;
+}
+
+.bar{
+    width:100%;
+    height:18px;
+    background:#1e293b;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.fill{
+    height:100%;
+    border-radius:20px;
+}
+
+.thai{
+    width:90%;
+    background:#22c55e;
+}
+
+.sg{
+    width:75%;
+    background:#38bdf8;
 }
 
 .faq{
@@ -234,6 +285,11 @@ footer{
 
 @media(max-width:768px){
 
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
     .hero h1{
         font-size:42px;
     }
@@ -244,22 +300,3 @@ footer{
 
 }
 ```
-body{
-    background:
-    radial-gradient(circle at top,#10204a 0%,#0b1120 40%),
-    #0b1120;
-    color:white;
-    font-family:'Prompt',sans-serif;
-} .online-users{
-    text-align:center;
-    color:#38bdf8;
-    margin-bottom:50px;
-    font-size:18px;
-}
-.online-users{
-    text-align:center;
-    color:#38bdf8;
-    font-size:18px;
-    font-weight:600;
-    margin-bottom:50px;
-}
