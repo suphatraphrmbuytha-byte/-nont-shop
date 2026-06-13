@@ -300,3 +300,31 @@ footer{
 
 }
 ```
+.floating-logo{
+    position:fixed;
+    top:120px;
+    left:50px;
+    opacity:0.08;
+    pointer-events:none;
+    animation:floatLogo 8s ease-in-out infinite;
+}
+
+.floating-logo img{
+    width:220px;
+}
+
+@keyframes floatLogo{
+
+    0%{
+        transform:translate(0,0);
+    }
+
+    50%{
+        transform:translate(80px,40px);
+    }
+
+    100%{
+        transform:translate(0,0);
+    }
+
+}
