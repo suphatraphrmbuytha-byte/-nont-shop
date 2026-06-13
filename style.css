@@ -48,6 +48,33 @@ nav a{
 .hero h1{
     font-size:60px;
     margin-bottom:15px;
+    font-weight:700;
+
+    background:linear-gradient(
+        90deg,
+        #ffffff,
+        #00ffff,
+        #ffffff
+    );
+
+    background-size:200% auto;
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    animation:shineText 3s linear infinite;
+}
+
+@keyframes shineText{
+
+    from{
+        background-position:-200%;
+    }
+
+    to{
+        background-position:200%;
+    }
+
 }
 
 .hero h2{
