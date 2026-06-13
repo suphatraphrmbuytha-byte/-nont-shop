@@ -256,3 +256,10 @@ body{
     margin-bottom:50px;
     font-size:18px;
 }
+.online-users{
+    text-align:center;
+    color:#38bdf8;
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:50px;
+}
