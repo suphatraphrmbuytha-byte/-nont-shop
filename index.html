@@ -1,232 +1,281 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourVPN</title>
 
-<title>Nont Shop</title>
+    <link rel="stylesheet" href="style.css">
 
-<style>
-*{
- box-sizing:border-box;
- font-family:Arial, sans-serif;
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-body{
- margin:0;
- background:#f5f5f5;
-}
-
-header{
- background:#111;
- color:white;
- padding:20px;
- display:flex;
- justify-content:space-between;
- align-items:center;
-}
-
-.logo{
- font-size:25px;
- font-weight:bold;
-}
-
-nav a{
- color:white;
- margin:10px;
- text-decoration:none;
-}
-
-.hero{
- padding:50px;
- background:linear-gradient(120deg,#111,#555);
- color:white;
- text-align:center;
-}
-
-.hero button{
- padding:12px 25px;
- border:0;
- border-radius:20px;
- cursor:pointer;
-}
-
-.search{
- text-align:center;
- padding:20px;
-}
-
-input{
- width:80%;
- padding:15px;
- border-radius:20px;
- border:1px solid #ddd;
-}
-
-.products{
- display:grid;
- grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
- gap:20px;
- padding:30px;
-}
-
-.card{
- background:white;
- border-radius:20px;
- padding:20px;
- box-shadow:0 5px 20px #ddd;
-}
-
-.card img{
- width:100%;
- border-radius:15px;
-}
-
-.price{
- color:red;
- font-size:22px;
- font-weight:bold;
-}
-
-button{
- background:#111;
- color:white;
- padding:10px;
- border-radius:10px;
- border:0;
- cursor:pointer;
-}
-
-footer{
- background:#111;
- color:white;
- text-align:center;
- padding:20px;
-}
-
-</style>
-
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<header>
-
-<div class="logo">
-NONT SHOP
-</div>
-
 <nav>
-<a href="#">หน้าแรก</a>
-<a href="#">สินค้า</a>
-<a href="#">ติดต่อ</a>
+
+    <div class="logo-text">
+        🔥 YourVPN
+    </div>
+
+    <a href="#packages">
+        แพ็กเกจ
+    </a>
+
 </nav>
+
+
+<header class="hero">
+
+    <img src="afec060f-aab1-42f2-afac-a01b0a242639-removebg-preview.png"
+         class="main-logo">
+
+    <h1>
+        YOURVPN
+    </h1>
+
+    <h2>
+        VPN ความเร็วสูง ดูหนัง เล่นเกม ใช้งานได้ไม่จำกัด
+    </h2>
+
+    <p>
+        รองรับ Android / iPhone แชร์ Wi-Fi ได้
+    </p>
+
+    <a href="https://www.facebook.com/share/1BYmkifQkA/?mibextid=wwXIfr"
+       target="_blank">
+
+        <button class="main-btn">
+            🛒 สั่งซื้อผ่าน Facebook
+        </button>
+
+    </a>
 
 </header>
 
 
-<section class="hero">
+<section class="features">
 
-<h1>ร้านค้าออนไลน์ของคุณ</h1>
+    <h2>
+        ทำไมต้องเลือก YourVPN ?
+    </h2>
 
-<p>ซื้อขายง่าย สวย เร็ว ใช้งานง่าย</p>
+    <div class="feature-grid">
 
-<button>เริ่มซื้อ</button>
+        <div class="feature-card">
+            ⚡ ความเร็วสูง
+        </div>
 
-</section>
+        <div class="feature-card">
+            🎮 เล่นเกมลื่น
+        </div>
 
+        <div class="feature-card">
+            📺 ดูหนัง 4K
+        </div>
 
-<div class="search">
+        <div class="feature-card">
+            ♾️ ใช้งานไม่จำกัด
+        </div>
 
-<input placeholder="ค้นหาสินค้า...">
+        <div class="feature-card">
+            📱 รองรับ Android / iOS
+        </div>
 
-</div>
+        <div class="feature-card">
+            🧪 มีให้ทดลองฟรี
+        </div>
 
-
-<section class="products">
-
-
-<div class="card">
-
-<img src="https://picsum.photos/300">
-
-<h2>สินค้า A</h2>
-
-<p>รายละเอียดสินค้า</p>
-
-<div class="price">
-฿499
-</div>
-
-<button>
-ใส่ตะกร้า
-</button>
-
-</div>
-
-
-
-<div class="card">
-
-<img src="https://picsum.photos/301">
-
-<h2>สินค้า B</h2>
-
-<p>ของคุณภาพดี</p>
-
-<div class="price">
-฿899
-</div>
-
-<button>
-ใส่ตะกร้า
-</button>
-
-</div>
-
-
-
-<div class="card">
-
-<img src="https://picsum.photos/302">
-
-<h2>สินค้า C</h2>
-
-<p>โปรโมชั่นพิเศษ</p>
-
-<div class="price">
-฿299
-</div>
-
-<button>
-ใส่ตะกร้า
-</button>
-
-</div>
-
+    </div>
 
 </section>
 
 
+<section id="packages">
+
+    <h2 class="title-package">
+        💎 แพ็กเกจยอดนิยม
+    </h2>     <!-- VPN1 -->
+    <div class="package-card">
+
+        <img src="2026-05-21-044fcf22-a36b-4496-9ab5-c2bacb7b8fb5.jpg"
+             class="package-img">
+
+        <div class="status">
+            🟢 Online
+        </div>
+
+        <h2>
+            🔥 TITAN VPN V.2
+        </h2>
+
+        <h3>
+            รหัสสินค้า : VPN1
+        </h3>
+
+        <p>🇹🇭 ใช้งานทั่วไป V.2</p>
+        <p>⚡ ความเร็ว 100Mbps+</p>
+        <p>📱 รองรับ Android / iOS</p>
+        <p>📶 แชร์ Wi-Fi ได้</p>
+        <p>🚀 ความเร็วสูงสุด 400Mbps+</p>
+        <p>♾️ ใช้งานไม่จำกัด</p>
+        <p>📺 รองรับ YouTube 4K</p>
+        <p>🧪 มีให้ทดลองฟรี</p>
+
+        <div class="price-box">
+
+            <h1>
+                💎 15 บาท / วัน
+            </h1>
+
+            <h2>
+                200 บาท / เดือน
+            </h2>
+
+        </div>
+
+        <a href="https://www.facebook.com/share/1BYmkifQkA/?mibextid=wwXIfr"
+           target="_blank">
+
+            <button class="buy-btn">
+                🛒 สั่งซื้อ
+            </button>
+
+        </a>
+
+    </div>
+
+
+
+    <!-- VPN2 -->
+    <div class="package-card">
+
+        <img src="2026-05-21-83d8fd84-b4af-4aa0-81ff-c490811dfd8b.jpg"
+             class="package-img">
+
+        <div class="status">
+            🟢 Online
+        </div>
+
+        <h2>
+            ⭐ TITAN UPGRADE V.2
+        </h2>
+
+        <h3>
+            รหัสสินค้า : VPN2
+        </h3>
+
+        <p>🎮 สำหรับสายเกม</p>
+        <p>⚡ ความเร็ว 300Mbps+</p>
+        <p>📱 รองรับ Android / iOS</p>
+        <p>📶 แชร์ Wi-Fi ได้</p>
+        <p>♾️ ใช้งานไม่จำกัด</p>
+        <p>🎯 เล่นเกมลื่น</p>
+        <p>📺 รองรับ YouTube 4K</p>
+        <p>🧪 มีให้ทดลองฟรี</p>
+
+        <div class="price-box">
+
+            <h1>
+                🎮 20 - 25 บาท / วัน
+            </h1>
+
+            <h2>
+                300 บาท / เดือน
+            </h2>
+
+        </div>
+
+        <a href="https://www.facebook.com/share/1BYmkifQkA/?mibextid=wwXIfr"
+           target="_blank">
+
+            <button class="buy-btn">
+                🛒 สั่งซื้อ
+            </button>
+
+        </a>
+
+    </div>
+
+</section> <!-- FAQ -->
+<section class="faq">
+
+    <h2>
+        ❓ คำถามที่พบบ่อย
+    </h2>
+
+    <div class="faq-box">
+
+        <h3>VPN ใช้ได้กับอะไรบ้าง ?</h3>
+        <p>
+            รองรับ Android และ iPhone
+        </p>
+
+    </div>
+
+    <div class="faq-box">
+
+        <h3>สามารถแชร์ Wi-Fi ได้หรือไม่ ?</h3>
+        <p>
+            สามารถแชร์ Wi-Fi ได้
+        </p>
+
+    </div>
+
+    <div class="faq-box">
+
+        <h3>มีให้ทดลองก่อนซื้อหรือไม่ ?</h3>
+        <p>
+            มีให้ทดลองฟรีก่อนตัดสินใจ
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ติดต่อ -->
+<section class="contact">
+
+    <h2>
+        📞 ติดต่อเรา
+    </h2>
+
+    <p>
+        Facebook : YourVPN
+    </p>
+
+    <a href="https://www.facebook.com/share/1BYmkifQkA/?mibextid=wwXIfr"
+       target="_blank">
+
+        <button class="main-btn">
+            💬 ติดต่อผ่าน Facebook
+        </button>
+
+    </a>
+
+</section>
+
+
+<!-- Footer -->
 <footer>
 
-© 2026 Nont Shop
+    <h3>
+        🔥 YourVPN
+    </h3>
+
+    <p>
+        VPN ความเร็วสูง ใช้งานได้ไม่จำกัด
+    </p>
+
+    <p>
+        © 2026 YourVPN All Rights Reserved
+    </p>
 
 </footer>
-
-
-<script>
-
-let buttons=document.querySelectorAll("button");
-
-buttons.forEach(btn=>{
- btn.onclick=()=>{
- alert("เพิ่มสินค้าเข้าตะกร้าแล้ว");
- }
-})
-
-</script>
-
 
 </body>
 </html>
