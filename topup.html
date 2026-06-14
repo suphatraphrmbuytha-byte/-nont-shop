@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>เติมเครดิต</title>
+
+<style>
+body{
+    background:#08142c;
+    color:white;
+    font-family:sans-serif;
+    text-align:center;
+    padding:30px;
+}
+
+.box{
+    max-width:400px;
+    margin:auto;
+    background:#102040;
+    padding:25px;
+    border-radius:15px;
+}
+
+input{
+    width:90%;
+    padding:12px;
+    margin:10px 0;
+    border:none;
+    border-radius:10px;
+}
+
+button{
+    width:95%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#00aaff;
+    color:white;
+    font-size:16px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>💰 เติมเครดิต</h2>
+
+<input type="text" id="username" placeholder="ชื่อผู้ใช้">
+
+<input type="number" id="amount" placeholder="จำนวนเงิน">
+
+<input type="text" id="slip" placeholder="ลิงก์รูปสลิป">
+
+<button onclick="sendData()">
+ส่งข้อมูล
+</button>
+
+</div>
+
+<script>
+
+function sendData(){
+
+fetch(https://script.google.com/macros/s/AKfycbyV2X5eRnWo_jVUSDoxPWzthb80KyCkFzIwshKR5-UHB6ffIZeSf39omvTzvdOeEedU7Q/exec,{
+
+method:"POST",
+
+body:JSON.stringify({
+
+username:document.getElementById("username").value,
+
+amount:document.getElementById("amount").value,
+
+slip:document.getElementById("slip").value
+
+})
+
+})
+
+.then(response=>response.text())
+
+.then(data=>{
+
+alert("ส่งข้อมูลสำเร็จ");
+
+});
+
+}
+
+</script>
+
+</body>
+</html>
