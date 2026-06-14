@@ -15,6 +15,7 @@ body{
     justify-content:center;
     align-items:center;
     height:100vh;
+    margin:0;
 }
 
 .box{
@@ -30,6 +31,7 @@ input{
     margin-top:15px;
     border:none;
     border-radius:10px;
+    box-sizing:border-box;
 }
 
 button{
@@ -45,6 +47,7 @@ button{
 
 a{
     color:#38bdf8;
+    text-decoration:none;
 }
 
 </style>
@@ -55,13 +58,15 @@ a{
 
 <h2>📝 สมัครสมาชิก</h2>
 
-<input type="text"
-       id="username"
-       placeholder="ชื่อผู้ใช้">
+<input
+type="text"
+id="username"
+placeholder="ชื่อผู้ใช้">
 
-<input type="password"
-       id="password"
-       placeholder="รหัสผ่าน">
+<input
+type="password"
+id="password"
+placeholder="รหัสผ่าน">
 
 <button onclick="register()">
 สมัครสมาชิก
@@ -69,7 +74,7 @@ a{
 
 <br><br>
 
-<a href="login.html">
+<a href="index.html">
 กลับหน้าเข้าสู่ระบบ
 </a>
 
@@ -79,19 +84,22 @@ a{
 
 function register(){
 
-localStorage.setItem(
-"username",
-document.getElementById("username").value
-);
+let user = document.getElementById("username").value;
+let pass = document.getElementById("password").value;
 
-localStorage.setItem(
-"password",
-document.getElementById("password").value
-);
+if(user === "" || pass === ""){
+
+    alert("กรุณากรอกข้อมูลให้ครบ");
+    return;
+
+}
+
+localStorage.setItem("username", user);
+localStorage.setItem("password", pass);
 
 alert("สมัครสมาชิกสำเร็จ");
 
-window.location.href="login.html";
+window.location.href = "index.html";
 
 }
 
