@@ -40,11 +40,30 @@ nav a{
     padding:90px 20px;
 }
 
+/* โลโก้ลอยขึ้นลง */
 .main-logo{
     width:180px;
     margin-bottom:20px;
+    animation:floatMainLogo 3s ease-in-out infinite;
 }
 
+@keyframes floatMainLogo{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+/* VPN SHOP แสงวิ่ง + ลอย */
 .hero h1{
     font-size:60px;
     margin-bottom:15px;
@@ -62,7 +81,9 @@ nav a{
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 
-    animation:shineText 3s linear infinite;
+    animation:
+    shineText 3s linear infinite,
+    floatTitle 3s ease-in-out infinite;
 }
 
 @keyframes shineText{
@@ -73,6 +94,22 @@ nav a{
 
     to{
         background-position:200%;
+    }
+
+}
+
+@keyframes floatTitle{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0px);
     }
 
 }
@@ -127,7 +164,8 @@ nav a{
     text-align:center;
     border:1px solid rgba(255,255,255,.06);
 }
-
+```
+```css id="eh3j8n"
 #packages{
     padding:80px 8%;
 }
@@ -256,7 +294,8 @@ nav a{
     border-radius:20px;
     margin-bottom:20px;
 }
-
+```
+```css id="yt6v2m"
 .contact{
     padding:80px 8%;
     text-align:center;
@@ -310,23 +349,7 @@ footer{
     display:none;
 }
 
-@media(max-width:768px){
-
-    nav{
-        flex-direction:column;
-        gap:15px;
-    }
-
-    .hero h1{
-        font-size:42px;
-    }
-
-    .hero h2{
-        font-size:20px;
-    }
-
-}
-```
+/* โลโก้พื้นหลังลอยไปมา */
 .floating-logo{
     position:fixed;
     top:120px;
@@ -355,3 +378,21 @@ footer{
     }
 
 }
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero h2{
+        font-size:20px;
+    }
+
+}
+```
