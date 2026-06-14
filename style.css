@@ -670,3 +670,18 @@ footer{
 
 }
  
+.promo-banner{
+    background:linear-gradient(90deg,#ff8a00,#ff3d00);
+    color:white;
+    text-align:center;
+    padding:20px;
+    border-radius:20px;
+    width:90%;
+    max-width:900px;
+    margin:30px auto;
+    box-shadow:0 0 25px rgba(255,120,0,.4);
+}
+
+.promo-banner h2{
+    margin-bottom:10px;
+}
