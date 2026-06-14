@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -15,6 +16,7 @@ body{
     justify-content:center;
     align-items:center;
     height:100vh;
+    margin:0;
 }
 
 .box{
@@ -22,6 +24,28 @@ body{
     padding:30px;
     border-radius:20px;
     width:320px;
+
+    animation:floatBox 3s ease-in-out infinite;
+}
+
+@keyframes floatBox{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-20px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+h2{
+    text-align:center;
 }
 
 input{
@@ -30,6 +54,7 @@ input{
     margin-top:15px;
     border:none;
     border-radius:10px;
+    box-sizing:border-box;
 }
 
 button{
@@ -45,16 +70,15 @@ button{
 
 a{
     color:#38bdf8;
+    text-decoration:none;
 }
 
 </style>
 </head>
 <body>
 
-<div class="login-page">
-
 <div class="box">
-</body>
+
 <h2>🔐 เข้าสู่ระบบ</h2>
 
 <input type="text" id="username" placeholder="ชื่อผู้ใช้">
@@ -99,27 +123,7 @@ alert("ชื่อผู้ใช้หรือรหัสผ่านไม�
 }
 
 </script>
-.login-page{
-    animation: floatPage 4s ease-in-out infinite;
-}
 
-@keyframes floatPage{
-
-    0%{
-        transform:translateY(0px);
-    }
-
-    50%{
-        transform:translateY(-20px);
-    }
-
-    100%{
-        transform:translateY(0px);
-    }
-
-}
 </body>
 </html>
- </body>
-
- 
+```
