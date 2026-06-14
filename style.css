@@ -396,3 +396,196 @@ footer{
 
 }
 ```
+/* =========================
+   รีวิวลูกค้า
+========================= */
+.review-section{
+    padding:80px 8%;
+}
+
+.review-section h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.review-card{
+    background:#111827;
+    padding:25px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.review-card h3{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+/* =========================
+   Countdown
+========================= */
+.countdown-box{
+    background:#111827;
+    padding:30px;
+    margin:60px 8%;
+    border-radius:25px;
+    text-align:center;
+}
+
+.countdown-box h2{
+    margin-bottom:20px;
+    color:#00ffff;
+}
+
+#countdown{
+    font-size:32px;
+    color:gold;
+    font-weight:700;
+}
+
+/* =========================
+   Best Seller
+========================= */
+.best-seller{
+    position:absolute;
+    top:15px;
+    right:15px;
+    background:red;
+    color:white;
+    padding:8px 15px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:600;
+}
+
+/* =========================
+   จำนวนผู้ซื้อ
+========================= */
+.buyer-count{
+    text-align:center;
+    margin-top:15px;
+    color:#22c55e;
+    font-weight:600;
+}
+
+/* =========================
+   Server Status
+========================= */
+.server-status{
+    padding:80px 8%;
+}
+
+.server-status h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.server-box{
+    margin-bottom:25px;
+}
+
+.bar{
+    width:100%;
+    height:18px;
+    background:#1e293b;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.fill{
+    height:100%;
+    border-radius:20px;
+}
+
+.thai{
+    width:92%;
+    background:#22c55e;
+}
+
+.sg{
+    width:80%;
+    background:#38bdf8;
+}
+
+/* =========================
+   คูปอง
+========================= */
+.coupon-box{
+    background:#111827;
+    padding:30px;
+    border-radius:25px;
+    margin:60px 8%;
+    text-align:center;
+}
+
+.coupon-box h2{
+    margin-bottom:20px;
+}
+
+.coupon-code{
+    color:gold;
+    font-size:30px;
+    font-weight:700;
+}
+
+/* =========================
+   Popup
+========================= */
+.popup{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:#111827;
+    padding:35px;
+    border-radius:25px;
+    text-align:center;
+    z-index:9999;
+    box-shadow:0 0 40px rgba(0,255,255,.3);
+}
+
+.popup button{
+    margin-top:20px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:15px;
+    cursor:pointer;
+}
+
+/* =========================
+   Dark / Light Mode
+========================= */
+.light-mode{
+    background:#f4f4f4;
+    color:black;
+}
+
+.light-mode .package-card,
+.light-mode .feature-card,
+.light-mode .faq-box,
+.light-mode .review-card{
+    background:white;
+    color:black;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media(max-width:768px){
+
+    .review-grid{
+        grid-template-columns:1fr;
+    }
+
+    #countdown{
+        font-size:24px;
+    }
+
+}
