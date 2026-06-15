@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -64,29 +65,48 @@ button{
 
 function sendData(){
 
-fetch("https://script.google.com/macros/s/AKfycbxtTXbV77D_NP3qCe_pmYa8FawRpRLotsrAqXtJSYNWCmr_x1BUYmC4f9xyQpK_PXiRig/exec",{
+    const file = document.getElementById("slip").files[0];
 
-method:"POST",
+    if(!file){
+        alert("กรุณาเลือกสลิป");
+        return;
+    }
 
-body:JSON.stringify({
+    const reader = new FileReader();
 
-username:document.getElementById("username").value,
+    reader.onload = function(){
 
-amount:document.getElementById("amount").value,
+        const base64 = reader.result.split(",")[1];
 
-slip:document.getElementById("slip").value
+        fetch("https://script.google.com/macros/s/AKfycbxtTXbV77D_NP3qCe_pmYa8FawRpRLotsrAqXtJSYNWCmr_x1BUYmC4f9xyQpK_PXiRig/exec",{
 
-})
+            method:"POST",
 
-})
+            body:JSON.stringify({
 
-.then(response=>response.text())
+                username:document.getElementById("username").value,
 
-.then(data=>{
+                amount:document.getElementById("amount").value,
 
-alert("ส่งข้อมูลสำเร็จ");
+                imageBase64:base64,
 
-});
+                contentType:file.type
+
+            })
+
+        })
+
+        .then(response=>response.text())
+
+        .then(data=>{
+
+            alert("ส่งข้อมูลสำเร็จ");
+
+        });
+
+    };
+
+    reader.readAsDataURL(file);
 
 }
 
@@ -94,3 +114,4 @@ alert("ส่งข้อมูลสำเร็จ");
 
 </body>
 </html>
+```
