@@ -98,11 +98,17 @@ function sendData(){
 
         .then(response=>response.text())
 
-        .then(data=>{
+.then(data=>{
 
-            alert("ส่งข้อมูลสำเร็จ");
+    alert("ส่งข้อมูลสำเร็จ");
 
-        });
+})
+
+.catch(error=>{
+
+    alert(error);
+
+});
 
     };
 
