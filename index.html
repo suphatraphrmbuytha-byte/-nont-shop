@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -87,6 +87,12 @@ document.getElementById("password").value == pass
 ){
 
 localStorage.setItem("loggedIn","true");
+
+localStorage.setItem(
+"userLogin",
+document.getElementById("username").value
+);
+
 window.location.href="home.html";
 
 }else{
