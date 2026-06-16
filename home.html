@@ -545,6 +545,22 @@ function buyPackage(packageName, price){
 });
 
 }
+let currentUser = localStorage.getItem("userLogin");
+
+document.getElementById("showUser").innerHTML = currentUser;
+
+fetch(
+"https://script.google.com/macros/s/AKfycbzwjgBRgtqQx9xPno366O-lDS_b13yyKmkDoxL3qhzYdVYFV9dWVkC5UoukjRS7tR1ozA/exec?action=getCredit&username="
++ encodeURIComponent(currentUser)
+)
+
+.then(response => response.text())
+
+.then(credit => {
+
+document.getElementById("showCredit").innerHTML = credit;
+
+});
 </script>
 
 <!-- Popup โปรโมชั่น -->
