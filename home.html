@@ -519,25 +519,25 @@ function buyPackage(packageName, price){
     + price
     )
 
-    .then(response => response.text())
+   .then(result => {
 
-    .then(result => {
+    if(result == "success"){
 
-        if(result == "success"){
+        alert("สั่งซื้อสำเร็จ 🎉");
 
-            alert("สั่งซื้อสำเร็จ 🎉");
+    }else if(result == "not enough"){
 
-        }else if(result == "not enough"){
+        alert("เครดิตไม่เพียงพอ");
 
-            alert("เครดิตไม่เพียงพอ");
+    }else{
 
-        }else{
+        alert(result);
 
-            alert(result);
+    }
 
-        }
+});
 
-    });
+}
 </script>
 
 <!-- Popup โปรโมชั่น -->
