@@ -52,6 +52,22 @@ button{
 
 <h2>💰 เติมเครดิต</h2>
 
+<div class="bank-box">
+
+<h3>💳 บัญชีสำหรับเติมเครดิต</h3>
+
+<p>ธนาคารกสิกรไทย</p>
+
+<h1 id="bankNumber">
+2158649058
+</h1>
+
+<button type="button" onclick="copyBank()">
+📋 คัดลอกเลขบัญชี
+</button>
+
+</div>
+
 <input type="text" id="username" placeholder="ชื่อผู้ใช้">
 
 <input type="number" id="amount" placeholder="จำนวนเงิน">
@@ -65,6 +81,14 @@ button{
 </div>
 
 <script>
+
+function copyBank(){
+
+navigator.clipboard.writeText("2158649058");
+
+alert("คัดลอกเลขบัญชีเรียบร้อยแล้ว ✅");
+
+}
 
 async function sendData(){
 
