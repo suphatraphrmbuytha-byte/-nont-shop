@@ -562,6 +562,30 @@ fetch(
 
 document.getElementById("showCredit").innerHTML = credit;
 
+let oldCredit = localStorage.getItem("lastCredit");
+
+if(oldCredit != null){
+
+if(Number(credit) > Number(oldCredit)){
+
+alert(
+"🎉 สวัสดีค้าบลูกค้า\n\nเครดิตของท่านเข้าเรียบร้อยแล้วค้าบ\nสามารถเลือกซื้อแพ็กที่ต้องการได้เลย ❤️"
+);
+
+let speech = new SpeechSynthesisUtterance(
+"เครดิตเข้าเรียบร้อยแล้วครับ สามารถเลือกซื้อแพ็กที่ต้องการได้เลยครับ"
+);
+
+speech.lang = "th-TH";
+
+speechSynthesis.speak(speech);
+
+}
+
+}
+
+localStorage.setItem("lastCredit", credit);
+
 });
 </script>
 
