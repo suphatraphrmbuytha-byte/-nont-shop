@@ -572,14 +572,17 @@ alert(
 "🎉 สวัสดีค้าบลูกค้า\n\nเครดิตของท่านเข้าเรียบร้อยแล้วค้าบ\nสามารถเลือกซื้อแพ็กที่ต้องการได้เลย ❤️"
 );
 
-let speech = new SpeechSynthesisUtterance(
-"เครดิตเข้าเรียบร้อยแล้วครับ สามารถเลือกซื้อแพ็กที่ต้องการได้เลยครับ"
-);
+let speech = new SpeechSynthesisUtterance();
+
+speech.text = "เครดิตเข้าเรียบร้อยแล้วครับ สามารถเลือกซื้อแพ็กที่ต้องการได้เลยครับ";
 
 speech.lang = "th-TH";
+speech.rate = 1;
+speech.pitch = 1;
+speech.volume = 1;
 
-speechSynthesis.speak(speech);
-
+window.speechSynthesis.cancel();
+window.speechSynthesis.speak(speech);
 }
 
 }
