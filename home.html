@@ -489,7 +489,17 @@ topBtn.onclick = function(){
     });
 
 };
+function buyPackage(packageName, price){
 
+let username = localStorage.getItem("userLogin");
+
+alert(
+"สั่งซื้อ " + packageName +
+"\nราคา " + price + " บาท" +
+"\n\nกรุณาแคปหน้าจอนี้แล้วส่งไปที่ Facebook : นนท์ มินิ"
+);
+
+}
 </script>
 <!-- Popup โปรโมชั่น -->
 <div id="promoPopup" class="promo-popup">
