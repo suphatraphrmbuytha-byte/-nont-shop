@@ -56,6 +56,14 @@ cursor:pointer;
 0
 </h1>
 
+<h2>📦 ประวัติการซื้อ</h2>
+
+<div id="orderList">
+
+ยังไม่มีรายการ
+
+</div>
+
 <button onclick="window.location.href='home.html'">
 🏠 กลับหน้าหลัก
 </button>
@@ -82,6 +90,25 @@ fetch(
 .then(credit => {
 
 document.getElementById("showCredit").innerHTML = credit;
+
+});
+  fetch(
+"https://script.google.com/macros/s/AKfycbzwjgBRgtqQx9xPno366O-lDS_b13yyKmkDoxL3qhzYdVYFV9dWVkC5UoukjRS7tR1ozA/exec?action=getOrders&username="
++ encodeURIComponent(username)
+)
+
+.then(response => response.text())
+
+.then(data => {
+
+let orders = JSON.parse(data);
+
+if(orders.length > 0){
+
+document.getElementById("orderList").innerHTML =
+orders.join("<br><br>");
+
+}
 
 });
 
