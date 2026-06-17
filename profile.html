@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>โปรไฟล์สมาชิก</title>
+
+<style>
+
+body{
+background:#0b1120;
+color:white;
+font-family:sans-serif;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+}
+
+.box{
+background:#111827;
+padding:30px;
+border-radius:20px;
+width:320px;
+text-align:center;
+}
+
+button{
+width:100%;
+padding:15px;
+margin-top:15px;
+border:none;
+border-radius:10px;
+background:#2563eb;
+color:white;
+cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>👤 โปรไฟล์สมาชิก</h2>
+
+<h3 id="showUser"></h3>
+
+<h2>
+💰 เครดิตคงเหลือ
+</h2>
+
+<h1 id="showCredit">
+0
+</h1>
+
+<button onclick="logout()">
+🚪 ออกจากระบบ
+</button>
+
+</div>
+
+<script>
+
+let username = localStorage.getItem("userLogin");
+
+document.getElementById("showUser").innerHTML = username;
+
+fetch(
+"https://script.google.com/macros/s/AKfycbzwjgBRgtqQx9xPno366O-lDS_b13yyKmkDoxL3qhzYdVYFV9dWVkC5UoukjRS7tR1ozA/exec?action=getCredit&username="
++ encodeURIComponent(username)
+)
+
+.then(response => response.text())
+
+.then(credit => {
+
+document.getElementById("showCredit").innerHTML = credit;
+
+});
+
+function logout(){
+
+localStorage.removeItem("loggedIn");
+
+window.location.href = "index.html";
+
+}
+
+</script>
+
+</body>
+</html>
