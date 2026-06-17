@@ -1,0 +1,76 @@
+```html
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Panel</title>
+
+<style>
+
+body{
+    background:#0b1120;
+    color:white;
+    font-family:sans-serif;
+    text-align:center;
+    padding:40px;
+}
+
+.box{
+    background:#111827;
+    padding:30px;
+    border-radius:20px;
+    max-width:500px;
+    margin:auto;
+}
+
+h1{
+    color:gold;
+}
+
+button{
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+    margin-top:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h1>👑 แผงควบคุมแอดมิน</h1>
+
+<p>ยินดีต้อนรับผู้ดูแลระบบ</p>
+
+<button onclick="window.location.href='home.html'">
+🏠 กลับหน้าหลัก
+</button>
+
+</div>
+
+<script>
+
+let user = localStorage.getItem("userLogin");
+
+if(user != "นนท์"){
+
+alert("❌ เมนูนี้สำหรับแอดมินหรือผู้ช่วยเท่านั้น");
+
+window.location.href = "home.html";
+
+}
+
+</script>
+
+</body>
+</html>
+```
