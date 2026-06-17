@@ -115,7 +115,26 @@ if(user != "นนท์"){
 alert("❌ เมนูนี้สำหรับแอดมินหรือผู้ช่วยเท่านั้น");
 
 window.location.href = "home.html";
+fetch(
+"https://script.google.com/macros/s/AKfycbzwjgBRgtqQx9xPno366O-lDS_b13yyKmkDoxL3qhzYdVYFV9dWVkC5UoukjRS7tR1ozA/exec?action=adminStats"
+)
 
+.then(response => response.text())
+
+.then(data => {
+
+let stats = JSON.parse(data);
+
+document.getElementById("memberCount").innerHTML =
+stats.members + " คน";
+
+document.getElementById("orderCount").innerHTML =
+stats.orders + " รายการ";
+
+document.getElementById("topupCount").innerHTML =
+stats.topup + " รายการ";
+
+});
 }
 
 </script>
