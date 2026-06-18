@@ -9,7 +9,9 @@
 <style>
 
 body{
-    background:#0b1120;
+   background:linear-gradient(135deg,#0f172a,#1e3a8a,#0ea5e9);
+background-size:400% 400%;
+animation:bgMove 10s ease infinite;
     color:white;
     font-family:sans-serif;
     display:flex;
@@ -23,6 +25,7 @@ body{
     padding:30px;
     border-radius:20px;
     width:320px;
+    animation:floatBox 3s ease-in-out infinite;
 }
 
 input{
@@ -44,7 +47,58 @@ button{
     color:white;
     cursor:pointer;
 }
+@keyframes bgMove{
 
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+@keyframes floatBox{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+    .loader{
+display:inline-block;
+width:20px;
+height:20px;
+border:3px solid rgba(255,255,255,.3);
+border-top:3px solid white;
+border-radius:50%;
+animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+
+0%{
+transform:rotate(0deg);
+}
+
+100%{
+transform:rotate(360deg);
+}
+
+}
 </style>
 </head>
 <body>
@@ -57,7 +111,7 @@ button{
 
 <input type="password" id="password" placeholder="รหัสผ่าน">
 
-<button onclick="register()">
+<button id="registerBtn" onclick="register()">
 สมัครสมาชิก
 </button>
 
@@ -66,6 +120,11 @@ button{
 <script>
 
 function register(){
+
+document.getElementById("registerBtn").innerHTML =
+'<span class="loader"></span>';
+
+document.getElementById("registerBtn").disabled = true;
 
 let username = document.getElementById("username").value;
 let password = document.getElementById("password").value;
