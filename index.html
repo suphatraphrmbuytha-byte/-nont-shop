@@ -9,7 +9,9 @@
 <style>
 
 body{
-    background:#0b1120;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#0ea5e9);
+    background-size:400% 400%;
+    animation:bgMove 10s ease infinite;
     color:white;
     font-family:sans-serif;
     display:flex;
@@ -23,6 +25,7 @@ body{
     padding:30px;
     border-radius:20px;
     width:320px;
+    animation:floatBox 3s ease-in-out infinite;
 }
 
 input{
@@ -49,7 +52,36 @@ a{
     color:#38bdf8;
     text-decoration:none;
 }
+@keyframes bgMove{
 
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+    @keyframes floatBox{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
 </style>
 </head>
 <body>
