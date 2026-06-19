@@ -4,58 +4,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>สมัครสมาชิก</title>
-<div class="box">
-
-<img src="logo.png" class="logo">
-
-<h2>📝 สมัครสมาชิก</h2>
-
-<input type="text" id="username" placeholder="ชื่อผู้ใช้">
-
-<input type="password" id="password" placeholder="รหัสผ่าน">
-
-<button id="registerBtn" onclick="register()">
-สมัครสมาชิก
-</button>
-
-</div>
-<div class="box">
-
-<img src="logo.png" class="logo">
-
-<h2>📝 สมัครสมาชิก</h2>
-
-<input type="text" id="username" placeholder="ชื่อผู้ใช้">
-
-<input type="password" id="password" placeholder="รหัสผ่าน">
-
-<button id="registerBtn" onclick="register()">
-สมัครสมาชิก
-</button>
-
-</div>
+<title>สมัครสมาชิก - VPN SHOP</title>
 
 <style>
 
 body{
-   background:linear-gradient(135deg,#0f172a,#1e3a8a,#0ea5e9);
-background-size:400% 400%;
-animation:bgMove 10s ease infinite;
-    color:white;
-    font-family:sans-serif;
+    margin:0;
+    height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    height:100vh;
+    font-family:sans-serif;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#0ea5e9);
+    background-size:400% 400%;
+    animation:bgMove 10s ease infinite;
+    color:white;
 }
 
 .box{
     background:#111827;
     padding:30px;
-    border-radius:20px;
     width:320px;
+    border-radius:20px;
     animation:floatBox 3s ease-in-out infinite;
+}
+
+.logo{
+    width:180px;
+    display:block;
+    margin:0 auto 20px;
+}
+
+h2{
+    text-align:center;
 }
 
 input{
@@ -77,134 +58,58 @@ button{
     color:white;
     cursor:pointer;
 }
-@keyframes bgMove{
 
-0%{
-background-position:0% 50%;
-}
-
-50%{
-background-position:100% 50%;
-}
-
-100%{
-background-position:0% 50%;
-}
-
-}
-
-@keyframes floatBox{
-
-0%{
-transform:translateY(0px);
-}
-
-50%{
-transform:translateY(-15px);
-}
-
-100%{
-transform:translateY(0px);
-}
-
-}
-    .loader{
-display:inline-block;
-width:20px;
-height:20px;
-border:3px solid rgba(255,255,255,.3);
-border-top:3px solid white;
-border-radius:50%;
-animation:spin 1s linear infinite;
+.loader{
+    display:inline-block;
+    width:20px;
+    height:20px;
+    border:3px solid rgba(255,255,255,.3);
+    border-top:3px solid white;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
 }
 
 @keyframes spin{
+    0%{
+        transform:rotate(0deg);
+    }
 
-0%{
-transform:rotate(0deg);
+    100%{
+        transform:rotate(360deg);
+    }
 }
 
-100%{
-transform:rotate(360deg);
+@keyframes bgMove{
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
 }
 
+@keyframes floatBox{
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
 }
-   <div class="box">
-
-<img src="logo.png" class="logo">
-
-<h2>📝 สมัครสมาชิก</h2>
-
-<input type="text" id="username" placeholder="ชื่อผู้ใช้">
-
-<input type="password" id="password" placeholder="รหัสผ่าน">
-
-<button id="registerBtn" onclick="register()">
-สมัครสมาชิก
-</button>
-
-</div>
-
-<script>
-<div class="box">
-
-<img src="logo.png" class="logo">
-
-<h2>📝 สมัครสมาชิก</h2>
-
-<input type="text" id="username" placeholder="ชื่อผู้ใช้">
-
-<input type="password" id="password" placeholder="รหัสผ่าน">
-
-<button id="registerBtn" onclick="register()">
-สมัครสมาชิก
-</button>
-
-</div>
-
-<script>
-
-   <div class="box">
-
-<img src="logo.png" class="logo">
-
-<h2>📝 สมัครสมาชิก</h2>
-
-<input type="text" id="username" placeholder="ชื่อผู้ใช้">
-
-<input type="password" id="password" placeholder="รหัสผ่าน">
-
-<button id="registerBtn" onclick="register()">
-สมัครสมาชิก
-</button>
-
-</div>
-
-<script>
-<div class="box">
-
-<img src="logo.png" class="logo">
-
-<h2>📝 สมัครสมาชิก</h2>
-
-<input type="text" id="username" placeholder="ชื่อผู้ใช้">
-
-<input type="password" id="password" placeholder="รหัสผ่าน">
-
-<button id="registerBtn" onclick="register()">
-สมัครสมาชิก
-</button>
-
-</div>
-.logo{
-width:180px;
-display:block;
-margin:0 auto 20px;
-}
-<script>
 
 </style>
 </head>
+
 <body>
 
 <div class="box">
@@ -222,23 +127,6 @@ margin:0 auto 20px;
 </button>
 
 </div>
-<div class="box">
-
-<img src="logo.png" class="logo">
-
-<h2>📝 สมัครสมาชิก</h2>
-
-<input type="text" id="username" placeholder="ชื่อผู้ใช้">
-
-<input type="password" id="password" placeholder="รหัสผ่าน">
-
-<button id="registerBtn" onclick="register()">
-สมัครสมาชิก
-</button>
-
-</div>
-
-<script>
 
 <script>
 
@@ -276,11 +164,15 @@ window.location.href = "index.html";
 
 alert("ชื่อผู้ใช้นี้ถูกใช้แล้ว");
 
+document.getElementById("registerBtn").innerHTML = "สมัครสมาชิก";
+document.getElementById("registerBtn").disabled = false;
+
 }
 
 });
 
 }
+
 </script>
 
 </body>
